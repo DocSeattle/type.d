@@ -1,6 +1,7 @@
 import { useState } from 'react';
 import Navigation from "./components/Navigation.tsx";
-import './App.css';
+import './App.scss';
+
 
 function App() {
   const [count, setCount] = useState(0)
