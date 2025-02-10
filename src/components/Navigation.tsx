@@ -1,25 +1,25 @@
+import { NavLink } from "react-router";
 import "./Navigation.scss";
-
 export default function Navigation(){
     const Nav = {
-       home: "#", 
-       solo: "#",
-       versus:"#",
-       leader:"#",
-       login: "#",
-       settings: "#"
+       home: "/", 
+       solo: "SoloPage",
+       versus:"pages/VersusPage",
+       leader:"pages/Leaderboards",
+       login: "pages/Login",
+       settings: "pages/Settings"
     }
     return (
         <>
             <nav>
                 <div className="left">
-                  <a href={Nav.home}>Type.d <span className="cursor">|</span> </a>
+                  <NavLink to={Nav.home}>Type.d <span className="cursor">|</span> </NavLink>
 
                 </div>
                 <div className="middle">
-                  <a href={Nav.solo}>Solo Mode <span className="cursor">|</span></a>
-                  <a href={Nav.versus}>Versus Mode <span className="cursor">|</span></a>
-                  <a href={Nav.leader}>Leaderboards <span className="cursor">|</span></a>
+                  <NavLink to={Nav.solo}>Solo Mode <span className="cursor">|</span></NavLink>
+                  <NavLink to={Nav.versus}>Versus Mode <span className="cursor">|</span></NavLink>
+                  <NavLink to={Nav.leader}>Leaderboards <span className="cursor">|</span></NavLink>
 
                 </div>
                 <div className="right">
