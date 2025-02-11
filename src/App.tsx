@@ -1,14 +1,21 @@
-import { useState } from 'react';
-import Navigation from "./components/Navigation.tsx";
+import { Route, HashRouter as Router, Routes } from "react-router";
+import SoloPage from "./pages/SoloPage.tsx"
+import Home from "./pages/Home.tsx"
 import './App.scss';
 
+/** 
+    * TODO:
+    * Routing
+    * */
 
 function App() {
-  const [count, setCount] = useState(0)
 
   return (
     <>
-      <Navigation />
+        <Routes>
+            <Route index path={"/", "/home", "/Home"} element={<Home />} />
+            <Route path={"/solo", "/Solo"} element={<SoloPage />} />
+        </Routes>
     </>
   )
 }

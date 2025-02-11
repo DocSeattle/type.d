@@ -2,3 +2,11 @@ $bg: #272727;
 $dark: #385D5D;
 $light: #679E9E;
 $white: #FFFFFF;
+
+.cursor {
+    animation: blink 1.5s steps(2, start) infinite both;
+}
+
+@keyframes blink {
+    to {visibility: hidden;}
+}

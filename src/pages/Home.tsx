@@ -1,9 +1,10 @@
 import Navigation from "../components/Navigation.tsx";
-export default function SoloPage() {
-    return (
+import "./Home.scss";
+export default function Home() {
+    return(
         <>
             <Navigation />
-            <h1>Solo Mode</h1>
+            <h2>Penis</h2>
         </>
     )
 }

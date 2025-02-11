@@ -1,13 +1,14 @@
 import { NavLink } from "react-router";
 import "./Navigation.scss";
+
 export default function Navigation(){
     const Nav = {
-       home: "/", 
-       solo: "SoloPage",
-       versus:"pages/VersusPage",
-       leader:"pages/Leaderboards",
-       login: "pages/Login",
-       settings: "pages/Settings"
+       home: "/home", 
+       solo: "/solo",
+       versus:"/vs",
+       leader:"/leader",
+       login: "/login",
+       settings: "/settings"
     }
     return (
         <>
