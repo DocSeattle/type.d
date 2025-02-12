@@ -13,7 +13,8 @@ function App() {
   return (
     <>
         <Routes>
-            <Route index path={"/", "/home", "/Home"} element={<Home />} />
+            <Route index element={<Home />} />
+            <Route path={"/", "/home", "/Home"} element={<Home />} />
             <Route path={"/solo", "/Solo"} element={<SoloPage />} />
         </Routes>
     </>

@@ -1,9 +1,10 @@
 import Navigation from "../components/Navigation.tsx";
+import Game from "../components/Game.tsx";
 export default function SoloPage() {
     return (
         <>
             <Navigation />
-            <h1>Solo Mode</h1>
+            <Game />
         </>
     )
 }
