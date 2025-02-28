@@ -2,7 +2,9 @@ $bg: #272727;
 $dark: #385D5D;
 $light: #679E9E;
 $white: #FFFFFF;
-
+$inactive: grey;
+$wrong: darkred;
+$right: green;
 .cursor {
     animation: blink 1.5s steps(2, start) infinite both;
 }

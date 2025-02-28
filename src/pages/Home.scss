@@ -1,4 +1,4 @@
-@import "../shared";
+@use "../shared.scss" as *;
 body, html {
   background-color: $bg;
 }

@@ -1,0 +1,14 @@
+build
+coverage
+plop-templates
+.vscode/settings.json
+jest.config.ts
+jest.setup.ts
+package.json
+plopfile.js
+pnpm-lock.yaml
+tsconfig.json
+next.config.mjs
+README.md
+.travis.yml
+.gitignore

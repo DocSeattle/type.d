@@ -1,4 +1,4 @@
-@import '../_shared.scss'; 
+@use '../_shared.scss' as *; 
 nav, .left, .middle, .right {display: flex}
 
 nav {
