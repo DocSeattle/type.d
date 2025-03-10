@@ -11,25 +11,42 @@
   max-width: 80vw;
   margin: 1rem auto;
 }
+
 .debug {
   display: flex;
   flex-direction: row;
   place-content: center;
   gap: 1rem;
 }
-h4.debug{color:white; margin: auto auto .25rem auto}
+
+h4.debug {
+  color: white;
+  margin: auto auto .25rem auto
+}
+
 .input {
   display: flex;
   place-content: center;
   margin: 1rem auto;
   text-align: center;
 }
+
 .inactive {
-  color: $inactive;    
+  color: $inactive;
 }
+
 .wrong {
-  color: $wrong;    
+  color: $wrong;
 }
+
 .correct {
   color: $right;
+}
+
+.Timer,
+.Stats {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  place-content: center;
 }
