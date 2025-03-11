@@ -31,11 +31,6 @@ export default function Game() {
   const [right, setRight] = useState(0); // state to store # of right words typed.
   const max = 30; // timer maximum duration.
 
-  const time = Timer(isRunning, max);
-
-  const minutes = Math.floor((time / MINUTE) % 60);
-  const seconds = Math.floor((time / SECOND) % 60);
-  const milliseconds = time % SECOND;
   useEffect(() => {
     const _str = getRandomPangram(pangrams);
     const _wordsWithSpaces = _str.match(/\S+\s*/g);
@@ -44,16 +39,27 @@ export default function Game() {
     setWords(_words); // these throw Arg errors but work nonetheless.
     setWordSpace(_wordsWithSpaces); // See line above.
     setWordTotal(_words.length);
-    return () => {};
+    return () => { };
   }, []);
-    useEffect(() => {
+
+  /**
+   * TIME STUFF
+   * TIME STUFF
+   * TIME STUFF
+   */
+  const time = Timer(isRunning, max);
+  const minutes = Math.floor((time / MINUTE) % 60);
+  const seconds = Math.floor((time / SECOND) % 60);
+  const milliseconds = time % SECOND;
+  useEffect(() => {
     // gameover checks.
     if (words.length == 0 || time * SECOND == max) {
       // if words.length hits 0 or time hits maximum duration, set gameOver to true
       setIsRunning(false);
       setGameOver(true);
     }
-  }, [time, words])
+  }, [time, words]);
+
   function getRandomPangram(pangrams: Pangrams) {
     return pangrams.pangrams[Math.floor(Math.random() * pangrams.pangrams.length)];
   }
@@ -61,11 +67,12 @@ export default function Game() {
   const handleEnter = (key: string) => {
     // key == key pressed.
     /*     if (gameOver) { return; }
-     */ if (!gameOver) {
+     */
+    if (!gameOver) {
       switch (key) {
         case ' ':
         case 'Enter':
-          switch (nextWordCheck(input)) {
+          switch (WordCheck(input)) {
             case true: {
               handleDestroyWord();
               handlePaintWord(true);
@@ -85,7 +92,7 @@ export default function Game() {
   };
 
   // check what the next word is
-  const nextWordCheck = (a?: string, debug?: boolean) => {
+  const WordCheck = (a?: string, debug?: boolean) => {
     const next = words[0][0];
     if (debug == true) {
       console.log(next);
@@ -110,7 +117,7 @@ export default function Game() {
         return;
     }
   };
-;
+  ;
   const onGameOver = (): boolean => {
     // concat stats into one object[]
     // check if user is logged in.
@@ -134,12 +141,10 @@ export default function Game() {
           value={input.trim()}
           onChange={e => setInput(e.target.value)}
           onKeyDown={e => {
-            /**
-             * Something in this onKeyDown() is causing a re-render issue when all words have been successfully typed.
-             * */
-            setIsRunning(!gameOver ? true : false);
+            setIsRunning(!gameOver);
             handleEnter(e.key);
           }}
+          disabled={words.length == 0 && gameOver}
         />
         <h4 className="Timer">
           {`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds.toString().padStart(3, '0')}`}
@@ -150,7 +155,7 @@ export default function Game() {
       </div>
       <h4 className="debug">Debug buttons</h4>
       <div className="debug">
-        <button onClick={() => nextWordCheck(words[0][0], true)}>log next word</button>
+        <button onClick={() => WordCheck(words[0][0], true)}>log next word</button>
         <button
           onClick={() => {
             console.log('destroying: ' + words[0][0]);

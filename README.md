@@ -1,50 +1,79 @@
-# React + TypeScript + Vite
+# Idéer
+Mina idéer har inte utvecklats oerhört mycket under tiden jag arbetat
+med detta projektet. Det lyder såhär:
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Jag ville ha en site som:
+Är enkel att förstå.
+Har ett registrering/login protokoll
+Testar användarens förmåga att skriva.
+Lagrar användarens presteringar på en databas.
+Låter användaren köpa ett fejk diplom för att skryta (obligatoriskt för uppgiften).
 
-Currently, two official plugins are available:
+## Stretch goals
+Jag har också ett par stretch-goals om jag lyckas med ovan i tid:
+En multiplayer version för att lära mig webbsockets.
+En snygg leaderboard sida med sökfunktion.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+# ToDo && ToDone
+- [ ] design i figma --- 0 timmar - Jag glömde lite av att göra en figma för projektet.
+- [X] Navigation --- 2 timmar - Det tog lite tid att komma igång med TSX igen, men lyckades.
+- [ ] Spelet --- ^16 timmar - Inte riktigt färdig än heller. Spenderat dagar på det änsålänge.
+- [ ] Login/Register --- 0 - Inte påbörjat
+- [ ] Webbshop --- 0 - Inte påbörjat
+- [ ] Leaderboard --- 0 - Inte påbörjat
+- [ ] Multiplayer --- 0 - Inte påbörjat
 
-## Expanding the ESLint configuration
+# Problem && Lösning
+Jag har haft en massa problem i projektet hittills, då är jag inte ens färdig än!
+Det mesta problemen faller under Game.tsx, då jag har problem med att bryta ut 
+kod i flera komponenter som behåller samma kontext, vilket har resulterat
+i att jag skriver en stor, grötig fil istället för flertal komponenter.
+Problem jag haft i Game.tsx:
+random array från json data
+Hantera input och dess validering
+Måla orden på skärmen efter validering
+Timer: stänga av spelet om tiden går ut, stoppa timer om användaren vinner.
+Nästa problem: backend för att lagra data, samt göra en gameover screen.
 
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
+## Tankar
+Jag tänker inte så mycket när jag arbetar, jag mest bara luddar mig fram.
+Vet inte vad jag ska tillägga här.
 
-- Configure the top-level `parserOptions` property like this:
+## Tredjeparter
+Jag tar stundvis hjälp av en nära vän som jobbar som webbutvecklare på IBM Malmö.
+Jag har också fått lite hjälp av en av personerna på LIA-2, 'Abbe' som jobbar? på 
+JOART Jönköping.
 
-```js
-export default tseslint.config({
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
-```
+## Källor
+Google!
+StackOverflow!
+Reddit!
+Ingen jävla AI såvitt jag vet
 
-- Replace `tseslint.configs.recommended` to `tseslint.configs.recommendedTypeChecked` or `tseslint.configs.strictTypeChecked`
-- Optionally add `...tseslint.configs.stylisticTypeChecked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and update the config:
+## Möten
+Stundvis har jag gjort code reviews med kompisen från IBM.
 
-```js
-// eslint.config.js
-import react from 'eslint-plugin-react'
+## Beslut
+N/A
 
-export default tseslint.config({
-  // Set the react version
-  settings: { react: { version: '18.3' } },
-  plugins: {
-    // Add the react plugin
-    react,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended rules
-    ...react.configs.recommended.rules,
-    ...react.configs['jsx-runtime'].rules,
-  },
-})
-```
+### Beslut historia
+N/A
+
+# Samarbete
+Jag jobbar ju själv, så jag har bara klagomål på mitt sammarbete mellan Mig & Jag.
+
+# Förändringar
+Tycker det går rätt bra, men jag arbetar lite långsamt.
+
+# Egna Tankar
+Det har blivit rätt intensivt för mig utanför skolan på sistonne. Mental hälsa
+skenat, imorgon (12 Mars) avlivas katten, IT problem när jag vart iväg. Mycket
+av min tid har försvunnit p.g.a sådanna anledningar. Osäker på om jag kommer 
+hinna slipa arbetet till närträffen.
+
+# Tidsplannering
+Se ovan.
+
+# Notes for teacher
+Se Egna Tankar; jag ber bara om förståelse! Annars tror jag allt bör gå väl.
+
