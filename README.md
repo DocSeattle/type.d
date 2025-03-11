@@ -24,30 +24,29 @@ En snygg leaderboard sida med sökfunktion.
 - [ ] Multiplayer --- 0 - Inte påbörjat
 
 # Problem && Lösning
-Jag har haft en massa problem i projektet hittills, då är jag inte ens färdig än!
+Jag har haft en massa problem i projektet hittills, då är jag inte ens färdig än! <br />
 Det mesta problemen faller under Game.tsx, då jag har problem med att bryta ut 
 kod i flera komponenter som behåller samma kontext, vilket har resulterat
 i att jag skriver en stor, grötig fil istället för flertal komponenter.
-Problem jag haft i Game.tsx:
-random array från json data
-Hantera input och dess validering
-Måla orden på skärmen efter validering
-Timer: stänga av spelet om tiden går ut, stoppa timer om användaren vinner.
-Nästa problem: backend för att lagra data, samt göra en gameover screen.
+Problem jag haft i Game.tsx:<br />
+random array från json data<br />
+Hantera input och dess validering<br />
+Måla orden på skärmen efter validering<br />
+Timer: stänga av spelet om tiden går ut, stoppa timer om användaren vinner.<br />
+Nästa problem: backend för att lagra data, samt göra en gameover screen.<br />
 
 ## Tankar
-Jag tänker inte så mycket när jag arbetar, jag mest bara luddar mig fram.
-Vet inte vad jag ska tillägga här.
+Jag tänker inte så mycket när jag arbetar, jag mest bara luddar mig fram.<br />
+Vet inte vad jag ska tillägga här.<br />
 
 ## Tredjeparter
-Jag tar stundvis hjälp av en nära vän som jobbar som webbutvecklare på IBM Malmö.
-Jag har också fått lite hjälp av en av personerna på LIA-2, 'Abbe' som jobbar? på 
-JOART Jönköping.
+Jag tar stundvis hjälp av en nära vän som jobbar som webbutvecklare på IBM Malmö.<br />
+Jag har också fått lite hjälp av en av personerna på LIA-2, 'Abbe' som jobbar? på JOART Jönköping.
 
 ## Källor
-Google!
-StackOverflow!
-Reddit!
+Google!<br />
+StackOverflow!<br />
+Reddit!<br />
 Ingen jävla AI såvitt jag vet
 
 ## Möten
@@ -66,10 +65,9 @@ Jag jobbar ju själv, så jag har bara klagomål på mitt sammarbete mellan Mig 
 Tycker det går rätt bra, men jag arbetar lite långsamt.
 
 # Egna Tankar
-Det har blivit rätt intensivt för mig utanför skolan på sistonne. Mental hälsa
-skenat, imorgon (12 Mars) avlivas katten, IT problem när jag vart iväg. Mycket
-av min tid har försvunnit p.g.a sådanna anledningar. Osäker på om jag kommer 
-hinna slipa arbetet till närträffen.
+Det har blivit rätt intensivt för mig utanför skolan på sistonne. Mental hälsa har skenat, imorgon (12 Mars) avlivas katten, IT problem när jag vart iväg. <br />
+Mycket av min tid har försvunnit p.g.a sådanna anledningar.<br />
+Osäker på om jag kommer hinna slipa arbetet till närträffen.
 
 # Tidsplannering
 Se ovan.
