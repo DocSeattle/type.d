@@ -1,4 +1,22 @@
 @use "../shared.scss" as *;
-body, html {
+
+body,
+html {
   background-color: $bg;
+}
+
+.Hero {
+  display: flex;
+  flex-direction: column;
+  width: 60vw;
+  place-content: center;
+  margin: auto;
+  margin-top: 5rem;
+  color: $white;
+  background: #353535;
+  padding: 0 .75rem .75rem;
+}
+
+.Hero>hr {
+  width: 100%;
 }

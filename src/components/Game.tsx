@@ -37,7 +37,7 @@ export default function Game() {
     const _words = _wordsWithSpaces!.map((_word: string) => _word.split(' '));
     setWordNr(0);
     setWords(_words); // these throw Arg errors but work nonetheless.
-    setWordSpace(_wordsWithSpaces); // See line above.
+    setWordSpace(_wordsWithSpaces)// See line above.
     setWordTotal(_words.length);
     return () => { };
   }, []);
@@ -118,13 +118,13 @@ export default function Game() {
     }
   };
   ;
-  const onGameOver = (): boolean => {
-    // concat stats into one object[]
-    // check if user is logged in.
-    // if user logged in, send stats to database
-    // if user not logged in, return.
-    return false;
-  };
+  // const onGameOver = (): boolean => {
+  // concat stats into one object[]
+  // check if user is logged in.
+  // if user logged in, send stats to database
+  // if user not logged in, return.
+  //   return false;
+  // };
   return (
     <>
       <div>
@@ -136,7 +136,7 @@ export default function Game() {
           ))}
         </div>
         <input
-          className="input"
+          className="inputGame"
           type="text"
           value={input.trim()}
           onChange={e => setInput(e.target.value)}
