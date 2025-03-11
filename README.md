@@ -27,7 +27,7 @@ En snygg leaderboard sida med sökfunktion.
 Jag har haft en massa problem i projektet hittills, då är jag inte ens färdig än! <br />
 Det mesta problemen faller under Game.tsx, då jag har problem med att bryta ut 
 kod i flera komponenter som behåller samma kontext, vilket har resulterat
-i att jag skriver en stor, grötig fil istället för flertal komponenter.
+i att jag skriver en stor, grötig fil istället för flertal komponenter.<br />
 Problem jag haft i Game.tsx:<br />
 random array från json data<br />
 Hantera input och dess validering<br />
