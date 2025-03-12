@@ -13,12 +13,21 @@ export default function Register() {
   async function onSubmit() {
     setDisabled(true);
     const registerData = JSON.stringify({
+      id: 0,
       email: eMail,
       name: userName,
-      password: passWord
+      password: sha256(passWord),
+      created_at: new Date()
     })
-
-    console.log(registerData);
+    await fetch("http://localhost:5000/api/register", {
+      headers: {
+        "Content-Type": "application/json",
+      },
+      method: "POST",
+      body: registerData
+    }).then(response => {
+      console.log(response);
+    })
     return;
   }
   const { handleSubmit, register, formState: { errors } } = useForm<FormInputs>();

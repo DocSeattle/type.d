@@ -36,7 +36,7 @@ export default function Game() {
     const _wordsWithSpaces = _str.match(/\S+\s*/g);
     const _words = _wordsWithSpaces!.map((_word: string) => _word.split(' '));
     setWordNr(0);
-    setWords(_words); // these throw Arg errors but work nonetheless.
+    setWords(_words);// these throw Arg errors but work nonetheless.
     setWordSpace(_wordsWithSpaces)// See line above.
     setWordTotal(_words.length);
     return () => { };
