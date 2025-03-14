@@ -1,15 +1,100 @@
 @use '../_shared.scss' as *;
 
+.game-container {
+  overflow: hidden;
+  height: 55vh;
+  display: flex;
+  flex-direction: column;
+  place-content: center;
+}
+
 .game {
+  height: max-content;
   color: $white;
   display: flex;
-  place-content: center center;
+  justify-content: center;
   gap: .5rem;
   font-size: 1.5rem;
-  margin-top: 1rem;
   flex-wrap: wrap;
   max-width: 80vw;
+  margin: 0 auto;
+  padding: 4rem;
+  background: lighten($bg, 3%);
+  border-radius: 1rem;
+  border: 2px $bg1 solid;
+
+
+  .inactive {
+    color: $inactive;
+  }
+
+  .wrong {
+    color: $wrong;
+  }
+
+  .correct {
+    color: $right;
+  }
+}
+
+.input-container {
+  background-size: 18px 18px;
+  background-image: linear-gradient(-45deg,
+      white 25%,
+      lightgray 25%,
+      lightgray 50%,
+      white 50%,
+      white 75%,
+      lightgray 75%,
+      lightgray 100%);
+  box-shadow: inset 0rem 0.5rem 2rem 0.25rem rgb(0 0 0 / 40%);
+  animation: pan 360s linear infinite;
+
+  display: flex;
+  flex-direction: column;
+  position: absolute;
+  bottom: 0px;
+  width: 100%;
+  height: 15vh;
+  padding: 2rem 0;
+
+  h3 {
+    text-align: center;
+    margin: 0;
+  }
+
+  .inputGame {
+    display: flex;
+    place-content: center;
+    margin: 1rem auto 0;
+    text-align: center;
+    height: 2rem;
+  }
+}
+
+
+.Timer {
+  color: white;
+  display: flex;
+  flex-wrap: nowrap;
+  place-content: center;
+  padding: 1rem;
+  width: fit-content;
   margin: 1rem auto;
+  background: lighten($bg, 3%);
+  border-radius: 1rem;
+  border: 2px $bg1 solid;
+}
+
+.Stats {
+  color: black;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+
+  h4 {
+    margin: .4rem;
+  }
 }
 
 .debug {
@@ -22,31 +107,4 @@
 h4.debug {
   color: white;
   margin: auto auto .25rem auto
-}
-
-.inputGame {
-  display: flex;
-  place-content: center;
-  margin: 1rem auto;
-  text-align: center;
-}
-
-.inactive {
-  color: $inactive;
-}
-
-.wrong {
-  color: $wrong;
-}
-
-.correct {
-  color: $right;
-}
-
-.Timer,
-.Stats {
-  color: white;
-  display: flex;
-  flex-wrap: nowrap;
-  place-content: center;
 }

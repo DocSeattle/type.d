@@ -1,14 +1,28 @@
 $bg: #272727;
+$bg1: #242424;
 $dark: #385D5D;
 $light: #679E9E;
 $white: #FFFFFF;
 $inactive: grey;
 $wrong: darkred;
 $right: green;
+
 .cursor {
-    animation: blink 1.5s steps(2, start) infinite both;
+  animation: blink 1.5s steps(2, start) infinite both;
 }
 
 @keyframes blink {
-    to {visibility: hidden;}
+  to {
+    visibility: hidden;
+  }
+}
+
+@keyframes pan {
+  from {
+    background-position: 0% 0%;
+  }
+
+  to {
+    background-position: 100% 0%;
+  }
 }

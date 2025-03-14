@@ -7,8 +7,7 @@ export default function Navigation() {
   const Nav = {
     home: "/home",
     solo: "/solo",
-    versus: "/vs",
-    leader: "/leader",
+    store: "/store",
     login: "/login",
     settings: "/settings"
   }
@@ -17,22 +16,21 @@ export default function Navigation() {
     <>
       <nav>
         <div className="left">
-          <NavLink to={Nav.home}>Type.d <span className="cursor">|</span> </NavLink>
+          <NavLink to={Nav.home}>Type.d<span className="cursor">|</span> </NavLink>
 
         </div>
         <div className="middle">
-          <NavLink to={Nav.solo}>Solo Mode <span className="cursor">|</span></NavLink>
-          <NavLink to={Nav.versus}>Versus Mode <span className="cursor">|</span></NavLink>
-          <NavLink to={Nav.leader}>Leaderboards <span className="cursor">|</span></NavLink>
+          <NavLink to={Nav.solo}>Solo Mode<span className="cursor">|</span></NavLink>
+          <NavLink to="{Nav.solo}">Store<span className="cursor">|</span></NavLink>
 
         </div>
         <div hidden={widget} className="secondMiddle">
           <Register />
         </div>
         <div className={`right ${widget ? "ml" : ""}`}>
-          <a href="#" onClick={() => toggleWidget(!widget)}>Login <span className="cursor">|</span>
+          <a href="#" onClick={() => toggleWidget(!widget)}>Login<span className="cursor">|</span>
           </a>
-          <a href={Nav.settings}>Settings <span className="cursor">|</span> </a>
+          <a href={Nav.settings}>Settings<span className="cursor">|</span> </a>
         </div>
       </nav>
     </>

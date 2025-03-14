@@ -127,7 +127,7 @@ export default function Game() {
   // };
   return (
     <>
-      <div>
+      <div className='game-container'>
         <div className="game">
           {wordSpace.map((word, wordIndex) => (
             <span id={`word-${wordIndex}`} key={wordIndex} className="wordSpan">
@@ -135,6 +135,13 @@ export default function Game() {
             </span>
           ))}
         </div>
+
+        <h4 className="Timer">
+          {`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds.toString().padStart(3, '0')}`}
+        </h4>
+      </div>
+      <div className='input-container'>
+        <h3>Write here!</h3>
         <input
           className="inputGame"
           type="text"
@@ -146,13 +153,16 @@ export default function Game() {
           }}
           disabled={words.length == 0 && gameOver}
         />
-        <h4 className="Timer">
-          {`${minutes.toString().padStart(2, '0')}:${seconds.toString().padStart(2, '0')}:${milliseconds.toString().padStart(3, '0')}`}
-        </h4>
-        <h4 className="Stats">
-          {right}/{wordTotal} | wrong: {errors}
-        </h4>
+        <div className='Stats'>
+          <h4>Progress: {right}/{wordTotal}</h4>
+          <h4>Missed: {errors}</h4>
+        </div>
       </div>
+    </>
+  );
+}
+/**DEBUG HTML
+ *
       <h4 className="debug">Debug buttons</h4>
       <div className="debug">
         <button onClick={() => WordCheck(words[0][0], true)}>log next word</button>
@@ -186,6 +196,4 @@ export default function Game() {
           GameOver
         </button>
       </div>
-    </>
-  );
-}
+ * */

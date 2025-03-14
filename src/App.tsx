@@ -2,7 +2,6 @@ import { Route, HashRouter as Router, Routes } from "react-router";
 import SoloPage from "./pages/SoloPage.tsx"
 import Home from "./pages/Home.tsx"
 import './App.scss';
-import Register from "./components/Register.tsx";
 
 /** 
     * TODO:

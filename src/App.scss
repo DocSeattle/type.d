@@ -1,27 +1,19 @@
 @use 'shared.scss' as *;
 
-:root {  
-  --bg: #272727;
-  --dark: #385D5D;
-  --light: #679E9E;
-  --white: #FFFFFF;
-}
-
-html, body {
-    padding: 0;
-    margin: 0;
-    font-family: Arial;
-    background-color: $bg;
-}
-
+html,
 body {
-    background-color: $bg;
+  padding: 0;
+  margin: 0;
+  font-family: Arial;
 }
+
 
 .cursor {
-    animation: blink 1.5s steps(2, start) infinite both;
+  animation: blink 1.5s steps(2, start) infinite both;
 }
 
 @keyframes blink {
-    to {visibility: hidden;}
+  to {
+    visibility: hidden;
+  }
 }
