@@ -1,6 +1,6 @@
 @use '../_shared.scss' as *;
 
-form {
+.login-register-form {
   display: flex;
   background-color: $dark;
   padding: 1rem 1.5rem;
@@ -9,12 +9,12 @@ form {
   flex-direction: column;
 }
 
-label {
+.login-register-label {
   display: flex;
   flex-direction: column;
 }
 
-.input {
+.login-register-input {
   padding: 0;
   margin: 0;
 }

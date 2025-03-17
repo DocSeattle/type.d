@@ -1,6 +1,7 @@
-import { Route, HashRouter as Router, Routes } from "react-router";
+import { Route, Routes } from "react-router";
 import SoloPage from "./pages/SoloPage.tsx"
 import Home from "./pages/Home.tsx"
+import Store from "./pages/Store.tsx";
 import './App.scss';
 
 /** 
@@ -11,13 +12,12 @@ import './App.scss';
 function App() {
 
   return (
-    <>
-      <Routes>
-        <Route index element={<Home />} />
-        <Route path={"/", "/home", "/Home"} element={<Home />} />
-        <Route path={"/solo", "/Solo"} element={<SoloPage />} />
-      </Routes>
-    </>
+    <Routes>
+      <Route index element={<Home />} />
+      <Route path={"/Home"} element={<Home />} />
+      <Route path={"/Solo"} element={<SoloPage />} />
+      <Route path={"/Store"} element={<Store />} />
+    </Routes>
   )
 }
 

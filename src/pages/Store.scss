@@ -1,0 +1,52 @@
+@use '../_shared.scss' as *;
+
+.store-container {
+  background-color: transparent;
+  display: flex;
+  flex-grow: 1;
+}
+
+.item-container {
+  display: flex;
+  flex-direction: row;
+  width: 80%;
+  background: transparent;
+  justify-content: space-evenly;
+  height: fit-content;
+  gap: 1rem;
+  margin: 1rem auto;
+
+}
+
+.store-checkout {
+  width: 80%;
+  margin: auto;
+  padding: 1rem;
+  border: 2px $dark solid;
+  display: flex;
+  background: $bg;
+}
+
+.checkout {
+  color: $white;
+  display: flex;
+  flex-direction: column;
+  width: 50%;
+
+  &>input {
+    border: 2px $dark solid;
+    border-radius: .25rem;
+    background: $bg1;
+    color: $white;
+  }
+}
+
+.store-cart {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+
+  &>button {
+    margin: 0 auto;
+  }
+}

@@ -21,7 +21,7 @@ export default function Navigation() {
         </div>
         <div className="middle">
           <NavLink to={Nav.solo}>Solo Mode<span className="cursor">|</span></NavLink>
-          <NavLink to="{Nav.solo}">Store<span className="cursor">|</span></NavLink>
+          <NavLink to={Nav.store}>Store<span className="cursor">|</span></NavLink>
 
         </div>
         <div hidden={widget} className="secondMiddle">
