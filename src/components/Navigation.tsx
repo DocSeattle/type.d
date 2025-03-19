@@ -5,7 +5,7 @@ import { useState } from "react";
 
 export default function Navigation() {
   const Nav = {
-    home: "/home",
+    home: "/",
     solo: "/solo",
     store: "/store",
     login: "/login",

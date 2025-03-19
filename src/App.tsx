@@ -13,10 +13,9 @@ function App() {
 
   return (
     <Routes>
-      <Route index element={<Home />} />
-      <Route path={"/Home"} element={<Home />} />
-      <Route path={"/Solo"} element={<SoloPage />} />
-      <Route path={"/Store"} element={<Store />} />
+      <Route index path={"/"} element={<Home />} />
+      <Route path={"/solo"} element={<SoloPage />} />
+      <Route path={"/store"} element={<Store />} />
     </Routes>
   )
 }
