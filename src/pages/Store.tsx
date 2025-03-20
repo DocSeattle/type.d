@@ -1,11 +1,20 @@
 import { useState } from "react"
 import Navigation from "../components/Navigation";
 import Background from "../components/Background";
-import StoreItem from "../components/StoreItem";
+import { StoreItem } from "../components/StoreItem";
 import "./Store.scss";
 
-
 export default function Store() {
+  const [cart, setCart] = useState([
+    {
+      id: "keb-1",
+      count: 0,
+    },
+    {
+      id: "dip-1",
+      count: 0,
+    }
+  ]);
   const availableItems = [{
     id: "keb-1",
     image: "",
@@ -20,30 +29,20 @@ export default function Store() {
     description: "Gloat about your typing speed",
     price: "5",
   }]
-
-  const [cart, setCart] = useState([{
-    id: "",
-    count: ""
-  }]);
-  const handleUpdateCart = () => {
-    const items = availableItems;
-    items.map((i, index) => {
-      const itemId = i.id;
-      const itemCount = document.getElementById(i.id)!.innerText;
-      const newArr = cart;
-      newArr[index] = { id: itemId, count: itemCount }
-      setCart(newArr);
-    })
-    return console.log(cart);
+  const dataFromChild = (id: string, count: number) => {
+    const index = cart.findIndex((el) => el.id == id);
+    cart[index].count = count;
+    setCart(cart);
   }
   return (
+
     <>
       <Background />
       <Navigation />
       <div className="store-container">
         <div className="item-container">
-          {availableItems.map(item =>
-            <StoreItem image={item.image} title={item.name} description={item.description} price={item.price} id={item.id} />
+          {availableItems.map((item, index) =>
+            <StoreItem key={index} image={item.image} title={item.name} description={item.description} price={item.price} id={item.id} callback={dataFromChild} inCart={false} />
           )}
         </div>
       </div>
@@ -65,17 +64,14 @@ export default function Store() {
           <button type="submit">Confirm & Pay</button>
         </form>
         <div className="store-cart">
-          <button onClick={() => handleUpdateCart()} >Update Cart</button>
-          { /**cart.map((item, index) => {
-            if (item.count == "0") { return; }
+          {cart.map((item, index) => {
+            // I can not for the life of me get the span to change number at the same rate as the state.
+            const aIndex = availableItems[availableItems.findIndex((el) => el.id == item.id)];
             return (
-              <div>
-                <h2>{availableItems[index].name}</h2>
-                <hr />
-                <h3>{availableItems[index].price}</h3>
-              </div>
+              <StoreItem key={index} title={aIndex.name} price={aIndex.price} id={aIndex.id} itemsInCart={cart[index].count} inCart={true} />
             )
-          }) */}
+          })}
+          <button >Update Cart</button>
         </div>
       </div>
     </>
