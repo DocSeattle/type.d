@@ -9,7 +9,7 @@ interface ItemProps {
   price: string,
   callback?: (id: string, count: number) => void;
   inCart?: boolean;
-  itemsInCart: number
+  itemsInCart?: number // updated state value (doesn't work.)
 }
 export const StoreItem = ({ ...args }: ItemProps) => {
   const [count, setCount] = useState(0);

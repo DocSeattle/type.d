@@ -42,7 +42,11 @@ export default function Store() {
       <div className="store-container">
         <div className="item-container">
           {availableItems.map((item, index) =>
-            <StoreItem key={index} image={item.image} title={item.name} description={item.description} price={item.price} id={item.id} callback={dataFromChild} inCart={false} />
+            <StoreItem key={index}
+              image={item.image} title={item.name} description={item.description} price={item.price} id={item.id} // interface attributes
+              callback={dataFromChild} // attempt at calling back data (seems to work properly?)
+              inCart={false} // var to control styling  
+            />
           )}
         </div>
       </div>
@@ -68,7 +72,10 @@ export default function Store() {
             // I can not for the life of me get the span to change number at the same rate as the state.
             const aIndex = availableItems[availableItems.findIndex((el) => el.id == item.id)];
             return (
-              <StoreItem key={index} title={aIndex.name} price={aIndex.price} id={aIndex.id} itemsInCart={cart[index].count} inCart={true} />
+              <StoreItem key={index}
+                title={aIndex.name} price={aIndex.price} id={aIndex.id} // Interface attributes
+                itemsInCart={cart[index].count} // send down updated state's value. (doesn't work correctly) 
+                inCart={true} /> // var to control style (haven't implemented styling yet.)
             )
           })}
           <button >Update Cart</button>
