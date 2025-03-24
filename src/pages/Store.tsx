@@ -18,6 +18,12 @@ export default function Store() {
     name: "Joke diploma",
     description: "Gloat about your typing speed",
     price: "5",
+  },
+  {
+    image: "https://placehold.co/600x400",
+    name: "Split keyboard",
+    description: "Split keyboard to be more ergonomic.",
+    price: "3000",
   }]
   const foo = (index: number, count: number) => {
     const bar = cart.map((c, i) => {

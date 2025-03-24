@@ -3,7 +3,6 @@
 .item-card {
   width: 33%;
   max-width: 400px;
-  height: 60%;
   border: 2px $dark solid;
   border-radius: 1rem;
   flex-grow: 1;
@@ -76,6 +75,7 @@ h4.item-description {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
+  margin-top: auto;
 }
 
 .item-count {
