@@ -33,11 +33,8 @@ export default function Game() {
 
   useEffect(() => {
     const _str = getRandomPangram(pangrams);
-    console.log(typeof _str);
     const _wordsWithSpaces = _str.match(/\S+\s*/g);
-    console.log(typeof _wordsWithSpaces);
     const _words = _wordsWithSpaces!.map((_word: string) => _word.split(' '));
-    console.log(_words);
     setWordNr(0);
     //@ts-expect-error: Shush
     setWords(_words);// these throw Arg errors but work nonetheless.
