@@ -36,8 +36,11 @@ app.post('/api/register', async (req, res) => {
   var year = date.getUTCFullYear();
   var month = date.getUTCMonth();
   var day = date.getUTCDate();
+  var hour = date.getUTCHours();
+  var minute = date.getUTCMinutes();
+  var second = date.getUTCSeconds();
 
-  connection.query(`INSERT INTO users ( username, email, hashword, created_at) VALUES ( "${req.body.name}", "${req.body.email}", "${req.body.password}", "${year}-${month}-${day}")`, (err: MysqlError) => {
+  connection.query(`INSERT INTO users ( username, email, hashword, created_at) VALUES ( "${req.body.name}", "${req.body.email}", "${req.body.password}", "${year}-${month}-${day} ${hour}:${minute}:${second}")`, (err: MysqlError) => {
     if (err) { console.log(err) }
     res.send();
   });
