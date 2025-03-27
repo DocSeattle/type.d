@@ -3,6 +3,7 @@ import SoloPage from "./pages/SoloPage.tsx"
 import Home from "./pages/Home.tsx"
 import Store from "./pages/Store.tsx";
 import './App.scss';
+import Database from "./pages/Database.tsx";
 
 /** 
     * TODO:
@@ -16,6 +17,7 @@ function App() {
       <Route index path={"/"} element={<Home />} />
       <Route path={"/solo"} element={<SoloPage />} />
       <Route path={"/store"} element={<Store />} />
+      <Route path={"/db"} element={<Database />} />
     </Routes>
   )
 }

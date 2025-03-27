@@ -29,10 +29,24 @@ app.listen(port, () => {
 
 app.get('/api/get-test', async (req, res) => {
   connection.connect(function (err: MysqlError) { if (err) { console.error(err.stack); return; } })
-  res.send();
+  res.send(`req: ${req}, res: ${res}` + " success!");
 });
 app.post('/api/register', async (req, res) => {
-  connection.query(`INSERT INTO users (username, email, hashword,created_at) VALUES (${req.body.username}, ${req.body.email}, ${req.body.hash}, ${req.body.datetime})`, function (error: MysqlError, results: string, fields: string) {
-    res.send(`Error: ${error}\n Results: ${results}\n Fields: ${fields}`);
+  var date = new Date();
+  var year = date.getUTCFullYear();
+  var month = date.getUTCMonth();
+  var day = date.getUTCDate();
+
+  connection.query(`INSERT INTO users ( username, email, hashword, created_at) VALUES ( "${req.body.name}", "${req.body.email}", "${req.body.password}", "${year}-${month}-${day}")`, (err: MysqlError) => {
+    if (err) { console.log(err) }
+    res.send();
+  });
+});
+app.get('/api/show-db', async (req, res) => {
+  connection.query("SELECT * from users", (err, result) => {
+    if (err) {
+      console.log(err)
+    }
+    res.send(result);
   });
 });

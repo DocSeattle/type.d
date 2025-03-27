@@ -9,7 +9,8 @@ export default function Navigation() {
     solo: "/solo",
     store: "/store",
     login: "/login",
-    settings: "/settings"
+    settings: "/settings",
+    db: "/db"
   }
   const [widget, toggleWidget] = useState(true);
   return (
@@ -22,7 +23,7 @@ export default function Navigation() {
         <div className="middle">
           <NavLink to={Nav.solo}>Solo Mode<span className="cursor">|</span></NavLink>
           <NavLink to={Nav.store}>Store<span className="cursor">|</span></NavLink>
-
+          <NavLink to={Nav.db}>Database<span className="cursor">|</span></NavLink>
         </div>
         <div hidden={widget} className="secondMiddle">
           <Register />
