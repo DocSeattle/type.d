@@ -31,6 +31,26 @@ app.get('/api/get-test', async (req, res) => {
   connection.connect(function (err: MysqlError) { if (err) { console.error(err.stack); return; } })
   res.send(`req: ${req}, res: ${res}` + " success!");
 });
+app.post('/api/login', async (req, res) => {
+  connection.query(`SELECT EXISTS ( SELECT 1 FROM users WHERE username = "${req.body.name}" AND hashword = "${req.body.password}") `, (err, result) => {
+    if (err) { console.log(err); throw err; }
+    const turnArrIntoStringArr = JSON.stringify(result[0]);
+    console.log("arrIntoStrArr: ", turnArrIntoStringArr);
+    const strArrTargetValue = turnArrIntoStringArr[(turnArrIntoStringArr.length) - 2].valueOf();
+    console.log("bar: ", strArrTargetValue);
+    const tarValBool = +strArrTargetValue == 1;
+    console.log("foobar: ", tarValBool);
+    switch (tarValBool) {
+      case true:
+        //login logic
+        res.send()
+        return;
+      case false:
+        res.send("Bad username or password");
+        return;
+    }
+  })
+})
 app.post('/api/register', async (req, res) => {
   var date = new Date();
   var year = date.getUTCFullYear();

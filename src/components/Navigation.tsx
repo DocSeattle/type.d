@@ -1,6 +1,7 @@
 import { NavLink } from "react-router";
 import "./Navigation.scss";
 import Register from "./Register";
+import Login from "./Login";
 import { useState } from "react";
 
 export default function Navigation() {
@@ -10,7 +11,6 @@ export default function Navigation() {
     store: "/store",
     login: "/login",
     settings: "/settings",
-    db: "/db"
   }
   const [widget, toggleWidget] = useState(true);
   return (
@@ -23,10 +23,9 @@ export default function Navigation() {
         <div className="middle">
           <NavLink to={Nav.solo}>Solo Mode<span className="cursor">|</span></NavLink>
           <NavLink to={Nav.store}>Store<span className="cursor">|</span></NavLink>
-          <NavLink to={Nav.db}>Database<span className="cursor">|</span></NavLink>
         </div>
         <div hidden={widget} className="secondMiddle">
-          <Register />
+          <Login />
         </div>
         <div className={`right ${widget ? "ml" : ""}`}>
           <a href="#" onClick={() => toggleWidget(!widget)}>Login<span className="cursor">|</span>
