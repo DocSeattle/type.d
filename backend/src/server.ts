@@ -35,11 +35,8 @@ app.post('/api/login', async (req, res) => {
   connection.query(`SELECT EXISTS ( SELECT 1 FROM users WHERE username = "${req.body.name}" AND hashword = "${req.body.password}") `, (err, result) => {
     if (err) { console.log(err); throw err; }
     const turnArrIntoStringArr = JSON.stringify(result[0]);
-    console.log("arrIntoStrArr: ", turnArrIntoStringArr);
     const strArrTargetValue = turnArrIntoStringArr[(turnArrIntoStringArr.length) - 2].valueOf();
-    console.log("bar: ", strArrTargetValue);
     const tarValBool = +strArrTargetValue == 1;
-    console.log("foobar: ", tarValBool);
     switch (tarValBool) {
       case true:
         //login logic
@@ -65,11 +62,17 @@ app.post('/api/register', async (req, res) => {
     res.send();
   });
 });
-app.get('/api/show-db', async (req, res) => {
-  connection.query("SELECT * from users", (err, result) => {
-    if (err) {
-      console.log(err)
-    }
+/** 
+app.get('/api/leaderboard', async (req, res) => {
+  connection.query('SELECT * FROM scores', (err, result) => {
+    if (err) { console.log(err) }
     res.send(result);
   });
 });
+app.post('/api/post-score', async (req, res) => {
+  connection.query(`INSERT INTO scores ( word_count, error_count, time, username ) VALUES ( "${req.words}", "${req.errors}", "${req.time}", "${req.user}" )`, (err, result) => {
+    if (err) { console.log(err) }
+    res.send(result);
+  });
+});
+*/
