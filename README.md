@@ -1,3 +1,17 @@
+### Instruktioner
+
+Dependent packages:
+npm, nodemon
+
+Öpnna två terminaler
+
+I första:
+cd type.d/backend/ && npm i && nodemon src/server.ts
+I andra:
+cd type.d/ && npm i && npm run dev
+
+# DOKUMENTATION
+
 # Idéer
 
 Mina idéer har inte utvecklats oerhört mycket under tiden jag arbetat

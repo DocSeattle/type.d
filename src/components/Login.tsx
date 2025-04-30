@@ -1,6 +1,14 @@
+import { sha256 } from "js-sha256";
+import { useState } from "react";
+import { useForm } from "react-hook-form";
 
-/**
-export default function lLogin() {
+interface FormInputs {
+  name: string,
+  password: string,
+
+}
+export default function Login() {
+
   async function onSubmit() {
     setDisabled(true);
     const loginData = JSON.stringify({
@@ -49,9 +57,8 @@ export default function lLogin() {
             /** pattern: {
               value: /^(?=.*[A-Z].*[A-Z])(?=.*[!@#$&*])(?=.*[0-9].*[0-9])(?=.*[a-z].*[a-z].*[a-z]).{8}$/,
               message: "Make sure you have: \n 2 Upper Case, 1 Special Character (!@#$&*), 2 Numerals, 3 Lower Case"
-//            }, */
-//          })}
-/**
+            }, */
+          })}
           placeholder="********"
           className="input"
           disabled={disabled}
@@ -61,4 +68,3 @@ export default function lLogin() {
       <button type="submit">Confirm</button>
     </form>)
 }
-*/
