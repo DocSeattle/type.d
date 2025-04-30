@@ -29,7 +29,7 @@ Jag har också ett par stretch-goals om jag lyckas med ovan i tid:
 En multiplayer version för att lära mig webbsockets.
 En snygg leaderboard sida med sökfunktion.
 
-# ToDo && ToDone
+# Planering
 
 Timmarna är estimeringar gjorda i efterhand, och därmed inte helt pålitliga.
 
