@@ -31,6 +31,8 @@ En snygg leaderboard sida med sökfunktion.
 
 # ToDo && ToDone
 
+Timmarna är estimeringar gjorda i efterhand, och därmed inte helt pålitliga.
+
 - [ ] design i figma --- 0 timmar - Jag glömde lite av att göra en figma för projektet.
 - [X] Navigation --- 2 timmar - Det tog lite tid att komma igång med TSX igen, men lyckades.
 - [X] Spelet --- ^16 timmar - Inte riktigt färdig än heller. Spenderat dagar på det änsålänge.
