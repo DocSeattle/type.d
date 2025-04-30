@@ -4,7 +4,6 @@ Dependent packages:
 npm, nodemon
 
 Öpnna två terminaler
-
 I första:
 cd type.d/backend/ && npm i && nodemon src/server.ts
 I andra:
