@@ -3,11 +3,11 @@
 Dependent packages:
 npm, nodemon
 
-Öpnna två terminaler
-I första:
-cd type.d/backend/ && npm i && nodemon src/server.ts
-I andra:
-cd type.d/ && npm i && npm run dev
+Öpnna två terminaler <br/>
+I första: <br/>
+cd type.d/backend/ && npm i && nodemon src/server.ts <br/>
+I andra: <br/>
+cd type.d/ && npm i && npm run dev <br/>
 
 # DOKUMENTATION
 
